@@ -12,8 +12,6 @@ const Pagetst: React.FC = () => {
   useEffect(() => {
     axios.get('http://localhost:27017/app/task').then(item => {
       console.log(item.data)
-      dispatch(setId(item.data))
-      dispatch(setTask(item.data.task))
     })
   })
 
